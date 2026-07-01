@@ -1,0 +1,824 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Acadia National Park",
+        "state": "Maine",
+        "slug": "acadia",
+        "established": 1919,
+        "area_sq_mi": 49,
+        "visitors": "3.9M",
+        "description": "Coastal park with granite peaks and ocean views"
+      },
+      "geometry": { "type": "Point", "coordinates": [-68.2733, 44.3386] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arches National Park",
+        "state": "Utah",
+        "slug": "arches",
+        "established": 1971,
+        "area_sq_mi": 120,
+        "visitors": "1.8M",
+        "description": "Over 2,000 natural stone arches"
+      },
+      "geometry": { "type": "Point", "coordinates": [-109.5925, 38.7331] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Badlands National Park",
+        "state": "South Dakota",
+        "slug": "badlands",
+        "established": 1978,
+        "area_sq_mi": 379,
+        "visitors": "1.2M",
+        "description": "Dramatic rock formations and fossil beds"
+      },
+      "geometry": { "type": "Point", "coordinates": [-102.3398, 43.8554] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Big Bend National Park",
+        "state": "Texas",
+        "slug": "big-bend",
+        "established": 1944,
+        "area_sq_mi": 1252,
+        "visitors": "581K",
+        "description": "Chihuahuan Desert and Rio Grande canyon"
+      },
+      "geometry": { "type": "Point", "coordinates": [-103.2428, 29.1275] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Biscayne National Park",
+        "state": "Florida",
+        "slug": "biscayne",
+        "established": 1980,
+        "area_sq_mi": 270,
+        "visitors": "705K",
+        "description": "Aquatic park protecting coral reefs"
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.1666, 25.4824] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Black Canyon of the Gunnison National Park",
+        "state": "Colorado",
+        "slug": "black-canyon-of-the-gunnison",
+        "established": 1999,
+        "area_sq_mi": 48,
+        "visitors": "308K",
+        "description": "Steep canyon with dramatic rock walls"
+      },
+      "geometry": { "type": "Point", "coordinates": [-107.7416, 38.5754] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bryce Canyon National Park",
+        "state": "Utah",
+        "slug": "bryce-canyon",
+        "established": 1928,
+        "area_sq_mi": 56,
+        "visitors": "2.6M",
+        "description": "Crimson-colored hoodoos and amphitheaters"
+      },
+      "geometry": { "type": "Point", "coordinates": [-112.1871, 37.5930] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Canyonlands National Park",
+        "state": "Utah",
+        "slug": "canyonlands",
+        "established": 1964,
+        "area_sq_mi": 527,
+        "visitors": "911K",
+        "description": "Vast desert landscape carved by rivers"
+      },
+      "geometry": { "type": "Point", "coordinates": [-109.8211, 38.2006] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Capitol Reef National Park",
+        "state": "Utah",
+        "slug": "capitol-reef",
+        "established": 1971,
+        "area_sq_mi": 378,
+        "visitors": "1.4M",
+        "description": "Waterpocket Fold geological monocline"
+      },
+      "geometry": { "type": "Point", "coordinates": [-111.2615, 38.2872] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carlsbad Caverns National Park",
+        "state": "New Mexico",
+        "slug": "carlsbad-caverns",
+        "established": 1930,
+        "area_sq_mi": 73,
+        "visitors": "349K",
+        "description": "117 limestone caves with massive chambers"
+      },
+      "geometry": { "type": "Point", "coordinates": [-104.5567, 32.1479] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Channel Islands National Park",
+        "state": "California",
+        "slug": "channel-islands",
+        "established": 1980,
+        "area_sq_mi": 390,
+        "visitors": "319K",
+        "description": "Five remote islands with unique wildlife"
+      },
+      "geometry": { "type": "Point", "coordinates": [-119.9853, 34.0069] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Congaree National Park",
+        "state": "South Carolina",
+        "slug": "congaree",
+        "established": 2003,
+        "area_sq_mi": 42,
+        "visitors": "215K",
+        "description": "Old-growth bottomland hardwood forest"
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.7826, 33.7948] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Crater Lake National Park",
+        "state": "Oregon",
+        "slug": "crater-lake",
+        "established": 1902,
+        "area_sq_mi": 286,
+        "visitors": "720K",
+        "description": "Deepest lake in the US in a collapsed volcano"
+      },
+      "geometry": { "type": "Point", "coordinates": [-122.1090, 42.8684] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cuyahoga Valley National Park",
+        "state": "Ohio",
+        "slug": "cuyahoga-valley",
+        "established": 2000,
+        "area_sq_mi": 51,
+        "visitors": "2.2M",
+        "description": "Rolling hills, waterfalls, and historic railroad"
+      },
+      "geometry": { "type": "Point", "coordinates": [-81.5514, 41.2409] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Death Valley National Park",
+        "state": "California",
+        "slug": "death-valley",
+        "established": 1994,
+        "area_sq_mi": 5270,
+        "visitors": "1.1M",
+        "description": "Hottest, driest, and lowest national park"
+      },
+      "geometry": { "type": "Point", "coordinates": [-116.8154, 36.5054] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Denali National Park",
+        "state": "Alaska",
+        "slug": "denali",
+        "established": 1917,
+        "area_sq_mi": 7408,
+        "visitors": "597K",
+        "description": "Home to North America's tallest peak"
+      },
+      "geometry": { "type": "Point", "coordinates": [-151.0064, 63.1148] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dry Tortugas National Park",
+        "state": "Florida",
+        "slug": "dry-tortugas",
+        "established": 1992,
+        "area_sq_mi": 100,
+        "visitors": "84K",
+        "description": "Remote islands with historic fort and reefs"
+      },
+      "geometry": { "type": "Point", "coordinates": [-82.8732, 24.6285] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Everglades National Park",
+        "state": "Florida",
+        "slug": "everglades",
+        "established": 1947,
+        "area_sq_mi": 2357,
+        "visitors": "942K",
+        "description": "Largest subtropical wilderness in the US"
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.8833, 25.2866] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gates of the Arctic National Park",
+        "state": "Alaska",
+        "slug": "gates-of-the-arctic",
+        "established": 1980,
+        "area_sq_mi": 13238,
+        "visitors": "11K",
+        "description": "Remote wilderness north of Arctic Circle"
+      },
+      "geometry": { "type": "Point", "coordinates": [-153.2960, 67.7876] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gateway Arch National Park",
+        "state": "Missouri",
+        "slug": "gateway-arch",
+        "established": 2018,
+        "area_sq_mi": 0.14,
+        "visitors": "2.4M",
+        "description": "Iconic 630-foot stainless steel arch"
+      },
+      "geometry": { "type": "Point", "coordinates": [-90.1847, 38.6247] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glacier National Park",
+        "state": "Montana",
+        "slug": "glacier",
+        "established": 1910,
+        "area_sq_mi": 1583,
+        "visitors": "3.0M",
+        "description": "Alpine terrain with glaciers and wildlife"
+      },
+      "geometry": { "type": "Point", "coordinates": [-113.7870, 48.7596] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glacier Bay National Park",
+        "state": "Alaska",
+        "slug": "glacier-bay",
+        "established": 1980,
+        "area_sq_mi": 5130,
+        "visitors": "703K",
+        "description": "Tidewater glaciers and marine wildlife"
+      },
+      "geometry": { "type": "Point", "coordinates": [-136.8397, 58.6658] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Canyon National Park",
+        "state": "Arizona",
+        "slug": "grand-canyon",
+        "established": 1919,
+        "area_sq_mi": 1902,
+        "visitors": "4.7M",
+        "description": "Iconic mile-deep canyon carved by Colorado River"
+      },
+      "geometry": { "type": "Point", "coordinates": [-112.1129, 36.1069] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Teton National Park",
+        "state": "Wyoming",
+        "slug": "grand-teton",
+        "established": 1929,
+        "area_sq_mi": 485,
+        "visitors": "3.4M",
+        "description": "Jagged mountain peaks and pristine lakes"
+      },
+      "geometry": { "type": "Point", "coordinates": [-110.8024, 43.7904] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Basin National Park",
+        "state": "Nevada",
+        "slug": "great-basin",
+        "established": 1986,
+        "area_sq_mi": 121,
+        "visitors": "144K",
+        "description": "Desert ranges with ancient bristlecone pines"
+      },
+      "geometry": { "type": "Point", "coordinates": [-114.2158, 38.9833] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Sand Dunes National Park",
+        "state": "Colorado",
+        "slug": "great-sand-dunes",
+        "established": 2004,
+        "area_sq_mi": 150,
+        "visitors": "602K",
+        "description": "Tallest sand dunes in North America"
+      },
+      "geometry": { "type": "Point", "coordinates": [-105.5943, 37.7916] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Smoky Mountains National Park",
+        "state": "Tennessee",
+        "slug": "great-smoky-mountains",
+        "established": 1934,
+        "area_sq_mi": 816,
+        "visitors": "13.3M",
+        "description": "Most visited park with Appalachian biodiversity"
+      },
+      "geometry": { "type": "Point", "coordinates": [-83.5102, 35.6118] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Guadalupe Mountains National Park",
+        "state": "Texas",
+        "slug": "guadalupe-mountains",
+        "established": 1972,
+        "area_sq_mi": 135,
+        "visitors": "243K",
+        "description": "Highest peak in Texas with fossil reef"
+      },
+      "geometry": { "type": "Point", "coordinates": [-104.8602, 31.8986] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haleakalā National Park",
+        "state": "Hawaii",
+        "slug": "haleakala",
+        "established": 1916,
+        "area_sq_mi": 52,
+        "visitors": "853K",
+        "description": "Massive dormant volcano with sunrise views"
+      },
+      "geometry": { "type": "Point", "coordinates": [-156.1730, 20.7204] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hawaiʻi Volcanoes National Park",
+        "state": "Hawaii",
+        "slug": "hawaii-volcanoes",
+        "established": 1916,
+        "area_sq_mi": 505,
+        "visitors": "1.2M",
+        "description": "Active volcanoes Kīlauea and Mauna Loa"
+      },
+      "geometry": { "type": "Point", "coordinates": [-155.2920, 19.4194] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hot Springs National Park",
+        "state": "Arkansas",
+        "slug": "hot-springs",
+        "established": 1921,
+        "area_sq_mi": 9,
+        "visitors": "2.1M",
+        "description": "Historic thermal spring bathhouses"
+      },
+      "geometry": { "type": "Point", "coordinates": [-93.0502, 34.5215] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Indiana Dunes National Park",
+        "state": "Indiana",
+        "slug": "indiana-dunes",
+        "established": 2019,
+        "area_sq_mi": 24,
+        "visitors": "2.5M",
+        "description": "Lake Michigan beaches and diverse ecosystems"
+      },
+      "geometry": { "type": "Point", "coordinates": [-87.0520, 41.6533] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Isle Royale National Park",
+        "state": "Michigan",
+        "slug": "isle-royale",
+        "established": 1940,
+        "area_sq_mi": 894,
+        "visitors": "26K",
+        "description": "Remote island wilderness in Lake Superior"
+      },
+      "geometry": { "type": "Point", "coordinates": [-88.5490, 47.9959] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Joshua Tree National Park",
+        "state": "California",
+        "slug": "joshua-tree",
+        "established": 1994,
+        "area_sq_mi": 1235,
+        "visitors": "3.1M",
+        "description": "Unique desert trees and rock formations"
+      },
+      "geometry": { "type": "Point", "coordinates": [-115.9004, 33.8734] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Katmai National Park",
+        "state": "Alaska",
+        "slug": "katmai",
+        "established": 1980,
+        "area_sq_mi": 6395,
+        "visitors": "33K",
+        "description": "Brown bears fishing for salmon at Brooks Falls"
+      },
+      "geometry": { "type": "Point", "coordinates": [-155.0126, 58.5976] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kenai Fjords National Park",
+        "state": "Alaska",
+        "slug": "kenai-fjords",
+        "established": 1980,
+        "area_sq_mi": 1047,
+        "visitors": "346K",
+        "description": "Coastal fjords and massive glaciers"
+      },
+      "geometry": { "type": "Point", "coordinates": [-149.6540, 59.9170] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kings Canyon National Park",
+        "state": "California",
+        "slug": "kings-canyon",
+        "established": 1940,
+        "area_sq_mi": 722,
+        "visitors": "632K",
+        "description": "Deep canyons and giant sequoia groves"
+      },
+      "geometry": { "type": "Point", "coordinates": [-118.6873, 36.8879] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kobuk Valley National Park",
+        "state": "Alaska",
+        "slug": "kobuk-valley",
+        "established": 1980,
+        "area_sq_mi": 2735,
+        "visitors": "15K",
+        "description": "Arctic wilderness with massive sand dunes"
+      },
+      "geometry": { "type": "Point", "coordinates": [-159.1400, 67.3560] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lake Clark National Park",
+        "state": "Alaska",
+        "slug": "lake-clark",
+        "established": 1980,
+        "area_sq_mi": 6297,
+        "visitors": "18K",
+        "description": "Volcanoes, mountains, and coastal wildlife"
+      },
+      "geometry": { "type": "Point", "coordinates": [-153.4179, 60.9662] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lassen Volcanic National Park",
+        "state": "California",
+        "slug": "lassen-volcanic",
+        "established": 1916,
+        "area_sq_mi": 166,
+        "visitors": "359K",
+        "description": "All four types of volcanoes and geothermal features"
+      },
+      "geometry": { "type": "Point", "coordinates": [-121.4205, 40.4977] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mammoth Cave National Park",
+        "state": "Kentucky",
+        "slug": "mammoth-cave",
+        "established": 1941,
+        "area_sq_mi": 84,
+        "visitors": "633K",
+        "description": "World's longest known cave system"
+      },
+      "geometry": { "type": "Point", "coordinates": [-86.1000, 37.1861] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mesa Verde National Park",
+        "state": "Colorado",
+        "slug": "mesa-verde",
+        "established": 1906,
+        "area_sq_mi": 81,
+        "visitors": "548K",
+        "description": "Ancient Puebloan cliff dwellings"
+      },
+      "geometry": { "type": "Point", "coordinates": [-108.4618, 37.2309] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Rainier National Park",
+        "state": "Washington",
+        "slug": "mount-rainier",
+        "established": 1899,
+        "area_sq_mi": 369,
+        "visitors": "1.7M",
+        "description": "Iconic stratovolcano with wildflower meadows"
+      },
+      "geometry": { "type": "Point", "coordinates": [-121.7269, 46.8799] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "National Park of American Samoa",
+        "state": "American Samoa",
+        "slug": "american-samoa",
+        "established": 1988,
+        "area_sq_mi": 21,
+        "visitors": "8K",
+        "description": "Tropical rainforest and coral reefs"
+      },
+      "geometry": { "type": "Point", "coordinates": [-170.6950, -14.2581] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New River Gorge National Park",
+        "state": "West Virginia",
+        "slug": "new-river-gorge",
+        "established": 2020,
+        "area_sq_mi": 113,
+        "visitors": "1.6M",
+        "description": "Ancient river canyon with whitewater rapids"
+      },
+      "geometry": { "type": "Point", "coordinates": [-81.0629, 37.9720] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North Cascades National Park",
+        "state": "Washington",
+        "slug": "north-cascades",
+        "established": 1968,
+        "area_sq_mi": 789,
+        "visitors": "40K",
+        "description": "Rugged mountains with over 300 glaciers"
+      },
+      "geometry": { "type": "Point", "coordinates": [-121.2069, 48.7718] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Olympic National Park",
+        "state": "Washington",
+        "slug": "olympic",
+        "established": 1938,
+        "area_sq_mi": 1442,
+        "visitors": "2.7M",
+        "description": "Temperate rainforest, mountains, and coastline"
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.4998, 47.8021] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Petrified Forest National Park",
+        "state": "Arizona",
+        "slug": "petrified-forest",
+        "established": 1962,
+        "area_sq_mi": 346,
+        "visitors": "644K",
+        "description": "Colorful fossilized wood and desert badlands"
+      },
+      "geometry": { "type": "Point", "coordinates": [-109.8068, 34.9099] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pinnacles National Park",
+        "state": "California",
+        "slug": "pinnacles",
+        "established": 2013,
+        "area_sq_mi": 42,
+        "visitors": "348K",
+        "description": "Rock spires from ancient volcanic field"
+      },
+      "geometry": { "type": "Point", "coordinates": [-121.1825, 36.4906] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Redwood National Park",
+        "state": "California",
+        "slug": "redwood",
+        "established": 1968,
+        "area_sq_mi": 221,
+        "visitors": "435K",
+        "description": "Tallest trees on Earth along foggy coast"
+      },
+      "geometry": { "type": "Point", "coordinates": [-124.0046, 41.2132] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rocky Mountain National Park",
+        "state": "Colorado",
+        "slug": "rocky-mountain",
+        "established": 1915,
+        "area_sq_mi": 415,
+        "visitors": "4.3M",
+        "description": "High alpine peaks and tundra ecosystems"
+      },
+      "geometry": { "type": "Point", "coordinates": [-105.6836, 40.3428] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saguaro National Park",
+        "state": "Arizona",
+        "slug": "saguaro",
+        "established": 1994,
+        "area_sq_mi": 143,
+        "visitors": "1.0M",
+        "description": "Giant saguaro cacti in Sonoran Desert"
+      },
+      "geometry": { "type": "Point", "coordinates": [-110.7372, 32.2530] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sequoia National Park",
+        "state": "California",
+        "slug": "sequoia",
+        "established": 1890,
+        "area_sq_mi": 631,
+        "visitors": "1.3M",
+        "description": "Giant sequoia trees including General Sherman"
+      },
+      "geometry": { "type": "Point", "coordinates": [-118.7720, 36.4864] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shenandoah National Park",
+        "state": "Virginia",
+        "slug": "shenandoah",
+        "established": 1935,
+        "area_sq_mi": 311,
+        "visitors": "1.6M",
+        "description": "Blue Ridge Mountains with Skyline Drive"
+      },
+      "geometry": { "type": "Point", "coordinates": [-78.4686, 38.2928] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theodore Roosevelt National Park",
+        "state": "North Dakota",
+        "slug": "theodore-roosevelt",
+        "established": 1978,
+        "area_sq_mi": 110,
+        "visitors": "749K",
+        "description": "Badlands with bison and wild horses"
+      },
+      "geometry": { "type": "Point", "coordinates": [-103.4309, 46.9790] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Virgin Islands National Park",
+        "state": "Virgin Islands",
+        "slug": "virgin-islands",
+        "established": 1956,
+        "area_sq_mi": 23,
+        "visitors": "323K",
+        "description": "Caribbean beaches and coral reefs"
+      },
+      "geometry": { "type": "Point", "coordinates": [-64.7469, 18.3419] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Voyageurs National Park",
+        "state": "Minnesota",
+        "slug": "voyageurs",
+        "established": 1975,
+        "area_sq_mi": 341,
+        "visitors": "232K",
+        "description": "Waterway park with interconnected lakes"
+      },
+      "geometry": { "type": "Point", "coordinates": [-92.8382, 48.4839] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "White Sands National Park",
+        "state": "New Mexico",
+        "slug": "white-sands",
+        "established": 2019,
+        "area_sq_mi": 229,
+        "visitors": "783K",
+        "description": "World's largest gypsum dune field"
+      },
+      "geometry": { "type": "Point", "coordinates": [-106.3257, 32.7872] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wind Cave National Park",
+        "state": "South Dakota",
+        "slug": "wind-cave",
+        "established": 1903,
+        "area_sq_mi": 53,
+        "visitors": "656K",
+        "description": "Dense cave network with boxwork formations"
+      },
+      "geometry": { "type": "Point", "coordinates": [-103.4266, 43.5745] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wrangell-St. Elias National Park",
+        "state": "Alaska",
+        "slug": "wrangell-st-elias",
+        "established": 1980,
+        "area_sq_mi": 20587,
+        "visitors": "79K",
+        "description": "Largest US national park with massive glaciers"
+      },
+      "geometry": { "type": "Point", "coordinates": [-142.9857, 61.7104] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yellowstone National Park",
+        "state": "Wyoming",
+        "slug": "yellowstone",
+        "established": 1872,
+        "area_sq_mi": 3472,
+        "visitors": "4.5M",
+        "description": "First national park with geysers and wildlife"
+      },
+      "geometry": { "type": "Point", "coordinates": [-110.5885, 44.4280] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yosemite National Park",
+        "state": "California",
+        "slug": "yosemite",
+        "established": 1890,
+        "area_sq_mi": 1187,
+        "visitors": "3.9M",
+        "description": "Granite cliffs, waterfalls, and giant sequoias"
+      },
+      "geometry": { "type": "Point", "coordinates": [-119.5383, 37.8651] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zion National Park",
+        "state": "Utah",
+        "slug": "zion",
+        "established": 1919,
+        "area_sq_mi": 229,
+        "visitors": "4.6M",
+        "description": "Red sandstone canyons and towering cliffs"
+      },
+      "geometry": { "type": "Point", "coordinates": [-113.0263, 37.2982] }
+    }
+  ]
+}
