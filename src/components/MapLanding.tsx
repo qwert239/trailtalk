@@ -129,9 +129,9 @@ const getMapStyle = (apiKey: string): maplibregl.StyleSpecification => {
     };
 };
 
-const MAPTILER_KEY = (process.env.REACT_APP_MAPTILER_KEY || "").trim();
+const MAPTILER_KEY = (import.meta.env.VITE_MAPTILER_KEY || "").trim();
 if (!MAPTILER_KEY) {
-    console.warn("[Map] No REACT_APP_MAPTILER_KEY in .env. Satellite tiles will not load.");
+    console.warn("[Map] No VITE_MAPTILER_KEY in .env. Satellite tiles will not load.");
 }
 
 const addSourceOnce = (map: maplibregl.Map, id: string, src: any) => {
