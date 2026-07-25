@@ -175,6 +175,30 @@ const postStyles: Record<string, CSSProperties> = {
         objectFit: "contain",
         background: "transparent",
     },
+    skeletonCircle: {
+        width: 22,
+        height: 22,
+        borderRadius: 999,
+        background: "rgba(255,255,255,0.12)",
+    },
+    skeletonLine: {
+        width: 96,
+        height: 14,
+        borderRadius: 6,
+        background: "rgba(255,255,255,0.12)",
+    },
+    skeletonMedia: {
+        width: "100%",
+        minHeight: 280,
+        maxHeight: "70vh",
+        aspectRatio: "4 / 3",
+        background: "rgba(255,255,255,0.06)",
+    },
+    skeletonFooter: {
+        height: 88,
+        background: "rgba(255,255,255,0.04)",
+        borderTop: "1px solid rgba(255,255,255,0.08)",
+    },
     actions: {
         display: "flex",
         alignItems: "center",
@@ -217,13 +241,6 @@ const postStyles: Record<string, CSSProperties> = {
         fontWeight: 800,
         marginLeft: 8,
         cursor: "pointer",
-    },
-    stars: {
-        padding: "8px 12px 14px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        minHeight: 36,
     },
     emptyWrap: {
         width: "100%",
@@ -313,14 +330,12 @@ function getUid(): string {
 
 function PostCard({
                       post,
-                      parkAvg,
                       reaction,
                       onLike,
                       onUpvote,
                       onDownvote,
                   }: {
     post?: PostWithId;
-    parkAvg: number;
     reaction?: Reaction;
     onLike: (postId: string) => void;
     onUpvote: (postId: string) => void;
@@ -328,6 +343,33 @@ function PostCard({
 }) {
     const [expanded, setExpanded] = useState(false);
     const [tapTs, setTapTs] = useState(0);
+    const img = post ? getImageUrl(post) : null;
+    const [mediaReady, setMediaReady] = useState(!img);
+
+    useEffect(() => {
+        if (!img) {
+            setMediaReady(true);
+            return;
+        }
+
+        let cancelled = false;
+        setMediaReady(false);
+
+        const preload = new Image();
+        const markReady = () => {
+            if (!cancelled) setMediaReady(true);
+        };
+        preload.onload = markReady;
+        preload.onerror = markReady;
+        preload.src = img;
+
+        // Cached images may already be complete
+        if (preload.complete) markReady();
+
+        return () => {
+            cancelled = true;
+        };
+    }, [img, post?.id]);
 
     if (!post) {
         return (
@@ -352,12 +394,25 @@ function PostCard({
         );
     }
 
+    if (!mediaReady) {
+        return (
+            <div style={postStyles.card} aria-busy="true" aria-label="Loading post">
+                <div style={postStyles.header}>
+                    <div style={postStyles.headerLeft}>
+                        <div style={postStyles.skeletonCircle} />
+                        <div style={postStyles.skeletonLine} />
+                    </div>
+                </div>
+                <div style={postStyles.skeletonMedia} />
+                <div style={postStyles.skeletonFooter} />
+            </div>
+        );
+    }
+
     const username = getUsername(post);
-    const img = getImageUrl(post);
     const likes = Number(post.likes ?? 0);
     const ups = Number(post.upvotes ?? 0);
     const downs = Number(post.downvotes ?? 0);
-    const rating = Number(post.rating ?? parkAvg);
 
     const liked = !!reaction?.liked;
     const upvoted = !!reaction?.upvoted;
@@ -452,11 +507,6 @@ function PostCard({
                     </button>
                 )}
             </div>
-
-            {/* Rating */}
-            <div style={postStyles.stars}>
-                <StarRating value={rating} size={22} />
-            </div>
         </article>
     );
 }
@@ -506,7 +556,7 @@ export default function PostPage() {
     const [posts, setPosts] = useState<PostWithId[]>([]);
     const [loadingPosts, setLoadingPosts] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [idx, setIdx] = useState(0);
+    const [scrollToPostId, setScrollToPostId] = useState<string | null>(null);
 
     // per-user reactions
     const [reactions, setReactions] = useState<Record<string, Reaction>>({});
@@ -534,7 +584,6 @@ export default function PostPage() {
                 const itemsHydrated = await hydrateUsernames(items);
                 if (!cancelled) {
                     setPosts(itemsHydrated);
-                    setIdx(0);
                 }
                 // fetch this user's reaction docs for these posts
                 const uid = getUid();
@@ -646,16 +695,17 @@ export default function PostPage() {
         }));
     }
 
-    const canPrev = idx > 0;
-    const canNext = idx < Math.max(0, posts.length - 1);
-    const goPrev = () => setIdx((i) => Math.max(0, i - 1));
-    const goNext = () => setIdx((i) => Math.min(posts.length - 1, i + 1));
-
-    const currentPost = !loadingPosts && posts.length > 0 ? posts[idx] : undefined;
-    const currentReaction = currentPost ? reactions[currentPost.id] : undefined;
-
     type ViewMode = "posts" | "grid" | "about";
     const [view, setView] = useState<ViewMode>("posts");
+
+    useEffect(() => {
+        if (view !== "posts" || !scrollToPostId || loadingPosts) return;
+        const el = document.getElementById(`post-${scrollToPostId}`);
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+            setScrollToPostId(null);
+        }
+    }, [view, scrollToPostId, loadingPosts, posts]);
 
     return (
         <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: APP_BG }}>
@@ -716,41 +766,29 @@ export default function PostPage() {
 
             {/* CONTENT */}
             {view === "posts" && (
-                <section style={ui.carouselWrap}>
-                    <button
-                        aria-label="Previous"
-                        onClick={goPrev}
-                        style={{ ...ui.arrow, left: 12, opacity: canPrev ? 1 : 0.35 }}
-                        disabled={!canPrev}
-                    >
-                        ◀
-                    </button>
-
-                    {loadingPosts ? (
+                <section style={ui.feedWrap}>
+                    {loadingPosts && (
                         <div style={ui.skeletonCard}>
                             <div style={ui.skeletonHeader} />
                             <div style={ui.skeletonMedia} />
                             <div style={ui.skeletonLines} />
                         </div>
-                    ) : (
-                        <PostCard
-                            post={currentPost}
-                            parkAvg={parkAvg}
-                            reaction={currentReaction}
-                            onLike={toggleLike}
-                            onUpvote={toggleUpvote}
-                            onDownvote={toggleDownvote}
-                        />
                     )}
-
-                    <button
-                        aria-label="Next"
-                        onClick={goNext}
-                        style={{ ...ui.arrow, right: 12, opacity: canNext ? 1 : 0.35 }}
-                        disabled={!canNext}
-                    >
-                        ▶
-                    </button>
+                    {!loadingPosts && posts.length === 0 && (
+                        <div style={ui.feedEmpty}>No posts yet.</div>
+                    )}
+                    {!loadingPosts &&
+                        posts.map((p) => (
+                            <div key={p.id} id={`post-${p.id}`} style={ui.feedItem}>
+                                <PostCard
+                                    post={p}
+                                    reaction={reactions[p.id]}
+                                    onLike={toggleLike}
+                                    onUpvote={toggleUpvote}
+                                    onDownvote={toggleDownvote}
+                                />
+                            </div>
+                        ))}
                 </section>
             )}
 
@@ -766,7 +804,7 @@ export default function PostPage() {
                                     key={p.id}
                                     style={ui.gridItem}
                                     onClick={() => {
-                                        setIdx(i);
+                                        setScrollToPostId(p.id);
                                         setView("posts");
                                     }}
                                     aria-label={`Open post ${i + 1}`}
@@ -884,29 +922,26 @@ const ui: Record<string, CSSProperties> = {
         color: "var(--cream)",
     },
 
-    // single-post carousel
-    carouselWrap: {
-        position: "relative",
-        padding: "16px 12px 40px",
+    // vertical post feed
+    feedWrap: {
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        gap: 12,
+        gap: 20,
+        padding: "16px 12px 48px",
+        width: "100%",
+        boxSizing: "border-box",
     },
-    arrow: {
-        position: "absolute",
-        top: "50%",
-        transform: "translateY(-50%)",
-        width: 44,
-        height: 44,
-        borderRadius: 999,
-        border: "1px solid rgba(168,159,145,0.25)",
-        background: "rgba(20,32,24,0.7)",
-        boxShadow: "0 8px 18px rgba(0,0,0,0.22)",
-        cursor: "pointer",
-        fontSize: 18,
+    feedItem: {
+        width: "100%",
+        maxWidth: 760,
+        scrollMarginTop: 120,
+    },
+    feedEmpty: {
         color: "var(--cream)",
-        backdropFilter: "blur(8px)",
+        textAlign: "center",
+        padding: 24,
+        fontWeight: 700,
     },
 
     // skeletons
