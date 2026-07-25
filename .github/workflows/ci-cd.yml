@@ -17,8 +17,9 @@ env:
   VITE_MAPTILER_KEY: ${{ secrets.VITE_MAPTILER_KEY }}
 
 jobs:
-  # Runs on every push, and on PRs targeting main
+  # Runs on non-main branch pushes, and on PRs targeting main
   ci:
+    if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref != 'refs/heads/main')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,10 +33,9 @@ jobs:
       - run: npm test
       - run: npm run build
 
-  # Deploys only on push to main, after the ci job succeeds
+  # Runs only on push to main (build + Firebase Hosting deploy)
   deploy:
-    needs: ci
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
